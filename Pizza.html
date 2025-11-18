@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luigi's Pizzeria</title>
+  <style>
+    :root{
+      --flag-green: #009246; /* Italy green */
+      --flag-white: #ffffff;
+      --flag-red:   #CE2B37; /* Italy red */
+      --card-bg: rgba(255,255,255,0.92);
+      --accent: #b33;
+      --radius: 14px;
+      --max-width: 960px;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* full-page 3-stripe Italian flag background */
+    html,body{height:100%;margin:0}
+    body{
+      background: linear-gradient(90deg, var(--flag-green) 0 33.333%, var(--flag-white) 33.333% 66.666%, var(--flag-red) 66.666% 100%);
+      display:flex;align-items:center;justify-content:center;padding:24px;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    }
+
+    .site{
+      width:100%;max-width:var(--max-width);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
+      display:grid;grid-template-columns: 1fr;gap:0;
+    }
+
+    header{
+      padding:28px 32px;
+      background:transparent;
+      display:flex;align-items:center;gap:18px;
+    }
+
+    .logo {
+      font-size:clamp(28px,4vw,40px);
+      font-weight:800;
+      letter-spacing:1px;
+      color:#222;
+      display:flex;flex-direction:column;
+    }
+    .logo .name{display:flex;align-items:baseline;gap:10px}
+    .logo .tag{font-size:14px;font-weight:600;color:var(--accent)}
+
+    main{
+      padding:32px;
+      background:transparent;
+      color:#222;
+    }
+
+    .hero{
+      display:flex;flex-direction:column;gap:12px;align-items:flex-start;
+    }
+
+    h1{margin:0;font-size:clamp(20px,3.2vw,32px)}
+    p.lead{margin:0;font-size:16px;line-height:1.4;color:#333}
+
+    .info{
+      margin-top:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+    }
+
+    .pill{
+      background:rgba(0,0,0,0.05);padding:10px 14px;border-radius:999px;font-weight:600;
+    }
+
+    footer{
+      padding:18px 32px;background:linear-gradient(90deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+      font-size:13px;color:#333;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
+    }
+
+    /* subtle decorative pizza badge */
+    .badge{
+      width:86px;height:86px;border-radius:50%;background:conic-gradient(#fff 0 20%, #f7c46b 20% 60%, #d3543b 60% 100%);box-shadow:inset 0 -8px 12px rgba(0,0,0,0.08);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#6b2b1d;font-size:18px
+    }
+
+    @media (min-width:900px){
+      .site{grid-template-columns:1fr 360px}
+      header{grid-column:1 / -1}
+      main{padding:40px}
+    }
+  </style>
+</head>
+<body>
+  <div class="site" role="document">
+    <header>
+      <div class="logo" aria-hidden="false">
+        <div class="name">
+          <div style="font-size:1.05em;">Luigi's</div>
+          <div style="font-size:0.9em;color:#444;font-weight:700">Pizzeria</div>
+        </div>
+        <div class="tag">Hand-tossed. Hot. Friendly.</div>
+      </div>
+      <div style="margin-left:auto" class="badge" aria-hidden="true">??</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Welcome to Luigi's Pizzeria</h1>
+        <p class="lead">Authentic flavors inspired by Italy — made fresh to order. Cozy, family-friendly neighborhood pizzeria.</p>
+
+        <div class="info">
+          <div class="pill">Open daily: 11:00 AM – 10:00 PM</div>
+          <div class="pill">Call to order: (513) 297-4167 </div>
+        </div>
+      </section>
+
+      <section style="margin-top:22px">
+        <h2 style="font-size:16px;margin:0 0 8px 0">About Us</h2>
+        <p style="margin:0;color:#444;line-height:1.5;">Luigi's has been crafting stone-baked pizzas using family recipes and high-quality ingredients. We focus on simplicity — great dough, bright tomato sauce, and melted cheese.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>Luigi's Pizzeria — Since 1998</div>
+      <div style="text-align:right">1234 Main Street, Anytown — (555) 123-4567</div>
+    </footer>
+  </div>
+
+<div id="divicw" data-bind="1F9E94B4-C2C6-4E48-8907-490716CB7292" data-org="" data-guid="21eb4ea3-ba34-435c-b9a1-53ab137c8046"></div><script>var i={t:function(t){var e="https://media.imi.chat/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});</script>
+
+
+</body>
+</html>
